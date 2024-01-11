@@ -2,6 +2,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 .container {
@@ -10,7 +11,7 @@ body {
   padding: 20px;
 }
 
-.vertical-menu {
+.menu {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -31,32 +32,54 @@ body {
 
 .hero {
   position: relative;
-  /* background-image: url("Makłowicz.jpg"); */
+  background-image: url("Makłowicz.jpg");
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: calc(100vh - 50px); /* Subtract the menu height (assuming it's 50px) from the viewport height */
 }
 
 .hero-image {
   display: block;
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-text {
-  text-align: left; /* Align text to the left */
+  text-align: left;
   color: #fff;
   font-size: 40px;
   position: absolute;
   top: 50%;
-  left: 10%; /* Adjust left position */
+  left: 10%;
   transform: translateY(-50%);
 }
 
 .hero-text-last-name {
   position: absolute;
-  top: 60%; /* Adjust the position of the last name */
-  left: 10%; /* Adjust left position */
+  top: 60%;
+  left: 10%;
   color: #fff;
   font-size: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Add margin to separate from the main image */
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-image {
+  width: 100px; /* Adjust the width of each image as needed */
+  height: 100px; /* Adjust the height of each image as needed */
+}
+
+.gallery-text {
+  margin-top: 5px; /* Add some space between the image and text */
+  color: #fff;
+  font-size: 14px;
 }
