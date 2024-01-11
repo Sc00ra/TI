@@ -5,15 +5,14 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
   padding: 20px;
 }
 
 .vertical-menu {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -31,6 +30,7 @@ body {
 }
 
 .hero {
+  position: relative;
   /* background-image: url("Makłowicz.jpg"); */
   background-size: cover;
   background-position: center;
@@ -39,15 +39,24 @@ body {
 
 .hero-image {
   display: block;
+  width: 100%;
   margin: 0 auto;
 }
 
 .hero-text {
-  text-align: right;
+  text-align: left; /* Align text to the left */
   color: #fff;
   font-size: 40px;
   position: absolute;
   top: 50%;
-  left: 20%;
+  left: 10%; /* Adjust left position */
   transform: translateY(-50%);
+}
+
+.hero-text-last-name {
+  position: absolute;
+  top: 60%; /* Adjust the position of the last name */
+  left: 10%; /* Adjust left position */
+  color: #fff;
+  font-size: 20px;
 }
