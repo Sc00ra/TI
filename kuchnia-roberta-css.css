@@ -1,0 +1,154 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 20px; */
+  background-color: #FFFFFF;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #EA526F;
+  width: 100%;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.menu {
+  width: 95%;
+  margin: 0 auto; /* Center the menu within the page */
+  padding: 0 10px; /* Add padding to create space from the edges of the screen */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically in the middle */
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #25CED1;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #25CED1;
+  border-radius: 20px; /* Set the border-radius to create oval-shaped items */
+
+  &:hover {
+    background-color: #25CED1;
+    color: #FCEADE;
+  }
+}
+.nav-item-special,
+.nav-item-special:hover {
+  background-color: #25CED1;
+  color: #FCEADE;
+  border: 1px solid #25CED1;
+}
+.kuchnia-section {
+  background-color: #fff; /* White background */
+  margin-left: 35px;
+
+
+}
+
+.kuchnia-text {
+  text-align: left;
+  color: #333; /* Set text color */
+}
+
+.kuchnia-text h2 {
+  font-size: 36px; /* Set font size for the heading */
+}
+.photo-text-section {
+  display: flex;
+  margin: 20px auto; /* Add margin to center the section */
+  width: 95%; /* Set the width to 95% of the page */
+}
+
+.photo {
+  flex: 1;
+}
+
+.photo-image {
+  width: 100%;
+  height: auto;
+}
+
+.text-box {
+  flex: 1;
+  padding: 20px;
+  background-color: #f2f2f2; /* Set background color for the text box */
+}
+
+.text-box h2 {
+  color: #333; /* Set text color for the title */
+}
+.dania-section {
+      text-align: center;
+      margin: 20px 0;
+}
+.dania-title {
+  font-weight: bold;
+  font-size: 36px;
+  color: #333;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+
+.circular-photo {
+    width: 120px; /* Adjusted width */
+    height: 120px; /* Adjusted height */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.circular-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.photo-section {
+  width: 95%;
+  margin: 20px auto;
+}
+
+.photo-row {
+  display: flex;
+  justify-content: space-around; /* Adjusted space distribution */
+  margin-top: 20px;
+}
+
+.photo-column {
+  flex: 1;
+  margin: 0 5px; /* Adjusted margin */
+}
+
+.photo-column img {
+  width: 100%; /* Set to 100% to fill the container */
+  height: 300px; /* Adjusted height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  margin-bottom: 10px; /* Adjusted margin */
+}
+
+.photo-caption {
+  text-align: center;
+  color: #333;
+}

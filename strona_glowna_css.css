@@ -50,6 +50,12 @@ body {
     color: #FCEADE;
   }
 }
+.nav-item-special,
+.nav-item-special:hover {
+  background-color: #25CED1;
+  color: #FCEADE;
+  border: 1px solid #25CED1;
+}
 
 .hero {
   width: 100%; /* Set the width to 100% to match the container */
