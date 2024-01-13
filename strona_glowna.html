@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Robert Makłowicz</title>
   <link rel="stylesheet" href="strona_glowna_css.css">
+  <script src="strona_glowna_js.js"></script>
 </head>
 <body>
   <div class="container">
+    <section class="logo-section">
+      <a href="strona_glowna.html">
+        <img src="Makłowicz.jpg" alt="Logo" class="logo">
+      </a>
+    </section>
     <header>
       <nav class="menu">
         <a href="strona_glowna.html" class="nav-item">Strona główna</a>
@@ -17,23 +23,46 @@
         <a href="kontakt.html" class="nav-item">Kontakt</a>
       </nav>
     </header>
-
     <section class="hero">
       <img src="Makłowicz.jpg" alt="Robert Makłowicz Logo" class="hero-image">
       <h1 class="hero-text">Robert</h1>
        <p class="hero-text-last-name">Makłowicz</p>
-
-      <section class="image-gallery">
-        <div class="gallery-item">
-          <img src="Makłowicz.jpg" alt="Image 1" class="gallery-image">
-          <p class="gallery-text">Caption 1</p>
+     </section>
+     <section class="split-container">
+      <div class="text-box">
+        <h2>Text Box Title</h2>
+        <p>Your text content goes here...</p>
+      </div>
+     <div class="slider">
+      <div class="slider-container">
+        <div class="slide">
+          <img src="Makłowicz.jpg" alt="Slide 1" class="slider-image">
+          <div class="caption">Caption for Slide 1</div>
         </div>
-        <div class="gallery-item">
-          <img src="Makłowicz.jpg" alt="Image 2" class="gallery-image">
-          <p class="gallery-text">Caption 2</p>
+        <div class="slide">
+          <img src="Makłowicz2.jpg" alt="Slide 2" class="slider-image">
+          <div class="caption">Caption for Slide 2</div>
         </div>
+        <div class="slide">
+          <img src="Makłowicz3.jpg" alt="Slide 3" class="slider-image">
+          <div class="caption">Caption for Slide 3</div>
+        </div>
+      </div>
+      <button class="prev-btn" onclick="prevSlide()">&#9664;</button>
+      <button class="next-btn" onclick="nextSlide()">&#9654;</button>
+    </div>
     </section>
 
+      <section class="newsletter">
+        <h2>Join Our Newsletter</h2>
+        <p>Stay updated with our latest news and promotions.</p>
+        <form id="newsletterForm">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <button type="button" onclick="subscribe()">Subscribe</button>
+        </form>
+      </section>
+      </div>
 
   </div>
 </body>

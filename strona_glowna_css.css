@@ -3,39 +3,62 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  background-color: #FFFFFF;
 }
 
 .container {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  /* padding: 20px; */
+  background-color: #FFFFFF;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #EA526F;
+  width: 100%;
+}
+
+.logo {
+  max-width: 100px;
 }
 
 .menu {
+  width: 95%;
+  margin: 0 auto; /* Center the menu within the page */
+  padding: 0 10px; /* Add padding to create space from the edges of the screen */
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Align items vertically in the middle */
   margin-bottom: 20px;
+  background-color: #FFFFFF;
 }
 
 .nav-item {
   text-decoration: none;
-  color: black;
+  color: #25CED1;
   padding: 10px 20px;
   cursor: pointer;
-  border: 1px solid #eee;
+  border: 1px solid #25CED1;
+  border-radius: 20px; /* Set the border-radius to create oval-shaped items */
 
   &:hover {
-    background-color: #f2f2f2;
-    color: #0056b3;
+    background-color: #25CED1;
+    color: #FCEADE;
   }
 }
 
 .hero {
+  width: 100%; /* Set the width to 100% to match the container */
   position: relative;
-  background-image: url("Makłowicz.jpg");
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 50px); /* Subtract the menu height (assuming it's 50px) from the viewport height */
+  height: calc(100vh - 50px);
+  margin-bottom: : 20px;
+  background-color: #FFFFFF;
 }
 
 .hero-image {
@@ -43,11 +66,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .hero-text {
   text-align: left;
-  color: #fff;
+  color: #EA526F;
   font-size: 40px;
   position: absolute;
   top: 50%;
@@ -59,27 +83,108 @@ body {
   position: absolute;
   top: 60%;
   left: 10%;
-  color: #fff;
+  color: #EA526F;
   font-size: 20px;
 }
-
-.image-gallery {
+.split-container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px; /* Add margin to separate from the main image */
+  margin-top: 20px;
+  background-color: #FFFFFF;
 }
 
-.gallery-item {
+.text-box {
+  flex: 1;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+
+.slider {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  background-color: #FFFFFF;
+}
+
+.slide {
+  flex: 0 0 100%; /* Each slide takes the full width of the container */
+  position: relative;
+  height: 300px; /* Set a fixed height for all slides */
+  background-color: #F2F2F2;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%; /* Ensure the image takes the full height of the .slide container */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+.caption {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
   text-align: center;
 }
 
-.gallery-image {
-  width: 100px; /* Adjust the width of each image as needed */
-  height: 100px; /* Adjust the height of each image as needed */
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(51, 51, 51, 0); /* Set alpha to 0 for a transparent background */
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px; /* Adjust font size as needed */
 }
 
-.gallery-text {
-  margin-top: 5px; /* Add some space between the image and text */
-  color: #fff;
-  font-size: 14px;
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+.newsletter {
+  background-color: #f2f2f2; /* Add a background color */
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  color: #333; /* Set a color for the title */
+}
+
+.newsletter p {
+  color: #555; /* Set a color for the text */
+}
+
+#email {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.newsletter button {
+  background-color: #0056b3; /* Set a background color for the button */
+  color: #fff; /* Set a text color for the button */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #003366; /* Change background color on hover */
 }
