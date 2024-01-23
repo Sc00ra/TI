@@ -9,32 +9,44 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  /* padding: 20px; */
-  background-color: #FFFFFF;
+  padding-top: 20px;
+
 }
 .logo-section {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  margin-left: 0;
-  margin-right: 0;
-  background-color: #EA526F;
-  width: 100%;
+
 }
 
-.logo {
-  max-width: 100px;
+.logo_glowne {
+  font-size: 40px;
+  color: #EA526F;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-shadow: 2px 2px gray;
+}
+.logo_glowne::before {
+  content: '❤';
+  font-size: 30px;
+  margin-right: 5px;
+}
+.logo_glowne::after {
+  content: '❤';
+  font-size: 30px;
+  margin-left: 5px;
 }
 
 .menu {
   width: 95%;
-  margin: 0 auto; /* Center the menu within the page */
-  padding: 0 10px; /* Add padding to create space from the edges of the screen */
+  margin: 0 auto;
+  padding:  10px;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align items vertically in the middle */
+  align-items: center;
   margin-bottom: 20px;
-  background-color: #FFFFFF;
 }
 
 .nav-item {
@@ -43,11 +55,12 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   border: 1px solid #25CED1;
-  border-radius: 20px; /* Set the border-radius to create oval-shaped items */
-
+  border-radius: 20px;
+  box-shadow: 5px 5px;
   &:hover {
     background-color: #25CED1;
     color: #FCEADE;
+
   }
 }
 .nav-item-special,
@@ -56,99 +69,155 @@ body {
   color: #FCEADE;
   border: 1px solid #25CED1;
 }
-.kuchnia-section {
-  background-color: #fff; /* White background */
-  margin-left: 35px;
 
-
-}
-
-.kuchnia-text {
-  text-align: left;
-  color: #333; /* Set text color */
-}
-
-.kuchnia-text h2 {
-  font-size: 36px; /* Set font size for the heading */
-}
 .photo-text-section {
   display: flex;
-  margin: 20px auto; /* Add margin to center the section */
-  width: 95%; /* Set the width to 95% of the page */
+  margin: 20px auto;
+  width: 95%;
+  align-items: stretch;
 }
 
 .photo {
   flex: 1;
+  display: flex;
+  align-items: stretch;
 }
 
 .photo-image {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .text-box {
   flex: 1;
-  padding: 20px;
-  background-color: #f2f2f2; /* Set background color for the text box */
+  height: auto;
+  background-color: #25CED1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text-box h2 {
-  color: #333; /* Set text color for the title */
+  margin-top: 0;
+  color: #FCEADE;
+  font-size: 48px;
+  text-align: center;
+  text-shadow: 1px 1px black;
+}
+
+.text-box p {
+  color: #FCEADE;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
 }
 .dania-section {
-      text-align: center;
-      margin: 20px 0;
+  text-align: center;
+  margin: 20px;
 }
+
 .dania-title {
+  font-size: 50px;
   font-weight: bold;
-  font-size: 36px;
-  color: #333;
+  margin-bottom: 20px;
+  color: #EA526F;
+  text-shadow: 1px 1px black;
 }
 
 .photo-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-
+  display: flex;
+  justify-content: space-around;
 }
 
 .circular-photo {
-    width: 120px; /* Adjusted width */
-    height: 120px; /* Adjusted height */
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 10px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  box-shadow: 5px 5px #EA526F;
 }
 
 .circular-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.circular-photo:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.circular-photo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .photo-section {
   width: 95%;
   margin: 20px auto;
+  padding-bottom: 20px;
 }
 
 .photo-row {
   display: flex;
-  justify-content: space-around; /* Adjusted space distribution */
+  justify-content: space-around;
   margin-top: 20px;
 }
 
 .photo-column {
+  position: relative;
   flex: 1;
-  margin: 0 5px; /* Adjusted margin */
+  margin: 0 5px;
 }
 
 .photo-column img {
-  width: 100%; /* Set to 100% to fill the container */
-  height: 300px; /* Adjusted height */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  margin-bottom: 10px; /* Adjusted margin */
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px #EA526F;
 }
 
-.photo-caption {
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  background-color: rgba(0, 0, 0, 0); /* Initial transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.overlay-link {
+  text-decoration: none;
+}
+
+.overlay-text {
+  color: #FCEADE;
+  font-size: 30px;
   text-align: center;
-  color: #333;
+}
+
+.photo-column:hover .photo-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 0.5 opacity on hover */
+  opacity: 1;
 }
