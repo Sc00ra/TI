@@ -10,13 +10,12 @@ body {
   width: 100%;
   margin: 0 auto;
   padding-top: 20px;
-
 }
 .logo-section {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-
+  margin-top: 20px;
 }
 
 .logo_glowne {
@@ -46,7 +45,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .nav-item {
