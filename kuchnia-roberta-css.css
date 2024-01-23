@@ -215,6 +215,7 @@ body {
   color: #FCEADE;
   font-size: 30px;
   text-align: center;
+  text-shadow: 1px 1px black;
 }
 
 .photo-column:hover .photo-overlay {
