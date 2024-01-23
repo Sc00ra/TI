@@ -25,12 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function subscribe() {
     const emailInput = document.getElementById('email');
-
-    // Clear the input field
     emailInput.value = '';
-
-    // Optionally, you can add logic here to handle the email subscription
-    // For now, we're just clearing the input field
   }
 
   prevBtn.addEventListener('click', prevSlide);

@@ -9,32 +9,44 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  /* padding: 20px; */
-  background-color: #FFFFFF;
+  padding-top: 20px;
+
 }
 .logo-section {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  margin-left: 0;
-  margin-right: 0;
-  background-color: #EA526F;
-  width: 100%;
+
 }
 
-.logo {
-  max-width: 100px;
+.logo_glowne {
+  font-size: 40px;
+  color: #EA526F;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-shadow: 2px 2px gray;
+}
+.logo_glowne::before {
+  content: '❤';
+  font-size: 30px;
+  margin-right: 5px;
+}
+.logo_glowne::after {
+  content: '❤';
+  font-size: 30px;
+  margin-left: 5px;
 }
 
 .menu {
   width: 95%;
-  margin: 0 auto; /* Center the menu within the page */
-  padding: 0 10px; /* Add padding to create space from the edges of the screen */
+  margin: 0 auto;
+  padding:  10px;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align items vertically in the middle */
+  align-items: center;
   margin-bottom: 20px;
-  background-color: #FFFFFF;
 }
 
 .nav-item {
@@ -43,11 +55,12 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   border: 1px solid #25CED1;
-  border-radius: 20px; /* Set the border-radius to create oval-shaped items */
-
+  border-radius: 20px;
+  box-shadow: 5px 5px;
   &:hover {
     background-color: #25CED1;
     color: #FCEADE;
+
   }
 }
 .nav-item-special,
@@ -58,13 +71,13 @@ body {
 }
 
 .hero {
-  width: 100%; /* Set the width to 100% to match the container */
+  width: 100%;
   position: relative;
   background-size: cover;
   background-position: center;
   height: calc(100vh - 50px);
   margin-bottom: : 20px;
-  background-color: #FFFFFF;
+
 }
 
 .hero-image {
@@ -78,82 +91,90 @@ body {
 .hero-text {
   text-align: left;
   color: #EA526F;
-  font-size: 40px;
+  font-size: 100px;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 10%;
   transform: translateY(-50%);
+  text-shadow: 2px 2px gray;
 }
 
 .hero-text-last-name {
   position: absolute;
-  top: 60%;
+  top: 35%;
   left: 10%;
   color: #EA526F;
-  font-size: 20px;
+  font-size: 80px;
+  text-shadow: 2px 2px gray;
 }
 .split-container {
+  flex:1;
   display: flex;
   margin-top: 20px;
-  background-color: #FFFFFF;
+  background-color:#25CED1;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .text-box {
   flex: 1;
-  padding: 20px;
-  background-color: #FFFFFF;
-}
+  padding: 10px;
+  background-color:#25CED1;
+  color: #FCEADE
 
+}
+.text-box h2{
+  text-shadow: 1px 1px gray;
+  font-size: 50px;
+  padding-left: 20px
+}
+.text-box p{
+  font-size: 20px;
+  margin-top: 50px;
+  padding-left: 20px;
+  margin-right:  20px;
+}
 .slider {
   flex: 1;
   position: relative;
   overflow: hidden;
-  background-color: #FFFFFF;
+  background-color: #25CED1;
 }
 
 
 .slider-container {
   display: flex;
+  width: 500px;
+  height: 500px;
   transition: transform 0.5s ease-in-out;
-  background-color: #FFFFFF;
+  background-color: #25CED1;
 }
 
 .slide {
-  flex: 0 0 100%; /* Each slide takes the full width of the container */
+  flex: 0 0 100%;
   position: relative;
-  height: 300px; /* Set a fixed height for all slides */
+  height: 300px;
   background-color: #F2F2F2;
 }
 
 .slider-image {
-  width: 100%;
-  height: 100%; /* Ensure the image takes the full height of the .slide container */
-  object-fit: cover; /* Maintain aspect ratio while covering the container */
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
 }
 
-.caption {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
 
-.prev-btn,
-.next-btn {
+
+.prev-btn, .next-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(51, 51, 51, 0); /* Set alpha to 0 for a transparent background */
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  color: #EA526F;
   border: none;
   padding: 10px;
   cursor: pointer;
-  font-size: 24px; /* Adjust font size as needed */
+  font-size: 24px;
 }
 
 .prev-btn {
@@ -163,34 +184,44 @@ body {
 .next-btn {
   right: 10px;
 }
+
 .newsletter {
-  background-color: #f2f2f2; /* Add a background color */
+  background-color: #EA526F;
   padding: 20px;
   margin-top: 20px;
   text-align: center;
 }
 
 .newsletter h2 {
-  color: #333; /* Set a color for the title */
+  color: #FCEADE;
+  font-size: 25px;
+  text-shadow: 1px 1px black;
 }
 
-.newsletter p {
-  color: #555; /* Set a color for the text */
+.newsletter label{
+  color: #FCEADE;
+  font-size: 17px;
+  text-shadow: 1px 1px black;
 }
 
 #email {
   padding: 10px;
   margin-right: 10px;
+  background-color: #FCEADE;
+
 }
 
 .newsletter button {
-  background-color: #0056b3; /* Set a background color for the button */
-  color: #fff; /* Set a text color for the button */
+  background-color: #25CED1;
+  color: #FCEADE;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  border-radius: 15px;
+
 }
 
 .newsletter button:hover {
-  background-color: #003366; /* Change background color on hover */
+  background-color: #FCEADE;
+  color: #25CED1;
 }
