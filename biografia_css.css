@@ -10,6 +10,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding-top: 20px;
+  padding-bottom: 20px;
 
 }
 .logo-section {
@@ -79,6 +80,8 @@ body {
   width: 95%;
   align-items: stretch;
   background-color: #EA526F;
+  box-shadow: 5px 5px #25CED1;
+
 }
 
 .photo {
@@ -112,7 +115,7 @@ body {
 
 .text-box-ok p {
   color: #FCEADE;
-  font-size: 15px;
+  font-size: 17px;
   text-align: center;
   padding: 20px;
 }

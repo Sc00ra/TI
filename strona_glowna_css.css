@@ -108,12 +108,13 @@ body {
   text-shadow: 2px 2px gray;
 }
 .split-container {
-  flex:1;
+  flex: 1;
   display: flex;
   margin-top: 20px;
-  background-color:#25CED1;
+  background-color: #25CED1;
   margin-left: 50px;
   margin-right: 50px;
+  align-items: stretch;
 }
 
 .text-box {
@@ -126,7 +127,7 @@ body {
 .text-box h2{
   text-shadow: 1px 1px gray;
   font-size: 50px;
-  padding-left: 20px
+  padding-left: 20px;
 }
 .text-box p{
   font-size: 20px;
@@ -148,6 +149,7 @@ body {
   height: 500px;
   transition: transform 0.5s ease-in-out;
   background-color: #25CED1;
+  align-items: stretch;
 }
 
 .slide {
@@ -155,12 +157,16 @@ body {
   position: relative;
   height: 300px;
   background-color: #F2F2F2;
+  display: flex;
+  align-items: stretch;
 }
 
 .slider-image {
   width: 500px;
   height: 500px;
   object-fit: cover;
+  display: flex;
+  align-items: stretch;
 }
 
 
@@ -175,6 +181,8 @@ body {
   padding: 10px;
   cursor: pointer;
   font-size: 24px;
+  display: flex;
+  align-items: stretch;
 }
 
 .prev-btn {
